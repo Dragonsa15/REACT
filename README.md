@@ -501,7 +501,32 @@ document.getElementById("tmpl-header").innerHTML = ""
 
 =====
 
-Create Dynamic elements using DOM
+DOM Event Handling
+
+```
+new Event(type, options)
+
+type
+A string with the name of the event.
+
+options Optional
+An object with the following properties:
+
+bubbles Optional
+A boolean value indicating whether the event bubbles. The default is false.
+
+cancelable Optional
+A boolean value indicating whether the event can be cancelled. The default is false.
+
+composed Optional
+A boolean value indicating whether the event will trigger listeners outside of a shadow root (see Event.composed for more details). The default is false.
+
+```
+
+
+
+
+
 
 
 

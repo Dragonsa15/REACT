@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Source can have multiple listeners.
+        A Listener can listen to more than one source
+    </p>
+    <button type="button" id="first">First</button>
+    <button type="button" id="second">Second</button>
+
+    <script>
+        function task1(evt) {
+            console.log('Task 1', evt.target);
+        }
+        function task2() {
+            console.log("Task 2")
+        }
+
+        document.getElementById("first").addEventListener("click", task1);
+        document.getElementById("first").addEventListener("click", task2);
+
+        document.getElementById("second").addEventListener("click", task1);
+
+    </script>
+</body>
+
+</html>

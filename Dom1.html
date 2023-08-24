@@ -25,7 +25,7 @@
         async function displayProducts() {
             let response = await fetch("https://fakestoreapi.com/products");
             let products = await response.json();
-            products.forEach(p => {
+            products.filter(p => p.category === 'electronics').forEach(p => {
                 let tr = document.createElement("tr");
                 let td = document.createElement("td");
                 let text = document.createTextNode(p.id);
