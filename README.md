@@ -292,7 +292,6 @@ var elems = data.filter(function(e) { return e % 2 === 0});
 2) HOF: function return a function
 
 Closure: a mechanism where the returned inner function can access all the members of outer function.
-
 function adder(base) {
     return function(no) {
         return base + no;
@@ -318,5 +317,116 @@ function doTask() {
     return new Date();
 }
 
+``````
 
+ECMA version for JS.
 
+ECMAScript 2015 --> JS 6 version features
+Most of the engines support ES 5 / JS 5.
+https://caniuse.com/
+
+"ECMAScript 2015 / JS 6" --> Transpiler / TransCompiler / Pre-processor --> ES 5 code
+
+Transpiler: Babel / Tracuer
+
+Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by older JavaScript engines.
+
+JS 6 / ECMAScript 2015 features:
+1) Arrow function
+
+Old Code:
+var data = [4, 3, 2, 5, 8,10, 15];
+var elems = data.filter(function(e) { return e % 2 === 0});
+
+With JS 6:
+var data = [4, 3, 2, 5, 8,10, 15];
+var elems = data.filter(e => e % 2 === 0);
+
+2) Block level scope using "let" and "const"
+
+```
+var g = 100;
+const PI = 3.14159; // constant
+function doTask() {
+    var a = 25;
+    if(g > a) {
+        let b = 30; // block scope --> not hoisted
+        c = 40;
+    }
+    console.log(g, a, b, c); // can't use "b"
+}
+
+doTask();
+console.log(g, a, b, c);
+```
+
+3) Template String literal
+
+Old way:
+"<div class='card><div class="cardHeader">" + e.name + "</div>"
+
+With new String literal:
+```
+`
+                <div class="card">
+                <div class="cardHeader">
+                    ${e.name}
+                </div>
+                <div class="cardBody">
+                    ${e.price}, ${e.category}
+                 </div>
+                </div>
+            `
+```
+
+4) Destructuring
+4.1) object
+
+var product = { "id": 1, "name": "Sony Bravia", "price": 218000.00, "category": "tv" };
+
+Old way:
+get name and price as local variable
+var name = product.name;
+var price = product.price; 
+
+ES 6 way:
+let {name, price } = product;
+console.log(name, price);
+
+4.2) arrays
+
+var colors = ["red", "green", "blue", "orange", "pink"];
+
+var [ r,g, ...others] = colors
+
+console.log(r); // red
+console.log(g); // green
+console.log(others);  [ "blue", "orange", "pink"]
+
+5) Clone
+
+var data = [5,12,9];
+
+var ref = data; // pointer
+
+ref[0] = 99;
+
+console.log(data[0]); // 99
+
+To Clone array:
+
+var copy = [...data]; 
+copy[1] = 44;
+console.log(copy); // [99, 44, 9]
+console.log(data); // [99, 12, 9]
+
+To clone object:
+
+var product = { "id": 1, "name": "Sony Bravia", "price": 218000.00, "category": "tv" };
+
+var cpy = {...product};
+
+cpy.price = 100;
+
+console.log(product.price); // 218000.00
+console.log(cpt.price); // 100
