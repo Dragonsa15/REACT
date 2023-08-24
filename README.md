@@ -86,6 +86,7 @@ console.log(g, a, b, c);
 
 JS Stack, WebApi, Callback Queue and Event loop
 
+```
 <button id="btn"> Ok </button>
 
 console.log("Hello");
@@ -104,24 +105,41 @@ document.getElementById("btn")
 });
 
 console.log("Bye");
+```
+How functions behave in JS:
 
-
-EventLoop
-
-while(true) {
-    if(stack is empty) {
-        Method m = callbackqueue.pop();
-        push "m" to stack
-        wait..
-    }
+1) 
+function add(x, y) {
+    return x + y;
 }
 
+var res = add(4, 5); // value of res? ==> 9
 
+2) 
+function add(x, y) {
+    console.log(x + y);
+}
 
+var res = add(4, 5); // value of res? ==> undefined
 
+3) 
+function add(x, y) {
+    return
+        x + y; // un-reachable code
+}
 
+var res = add(4, 5); // value of res? ==> undefined
 
+Issue --> AST in JS [ ; is optional in JS] --> return is a valid token by itself ==> [return;]
 
+var x = 10;
+var y = 15;
+var res = x + y;
 
+=================
+
+Resume @11:15
+
+OOP in JS
 
 
