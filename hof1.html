@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="lib.js"></script>
+    <script>
+
+        var products = [
+            { "id": 1, "name": "Sony Bravia", "price": 218000.00, "category": "tv" },
+            { "id": 2, "name": "iPhone 14", "price": 97000.00, "category": "mobile" },
+            { "id": 3, "name": "Wacom", "price": 5000.00, "category": "computer" },
+            { "id": 4, "name": "OnePlus nord", "price": 89000.00, "category": "mobile" },
+            { "id": 5, "name": "Macbook pro", "price": 260000.00, "category": "computer" }
+        ]
+
+
+        function toCard(e) {
+            return `
+                <div class="card">
+                <div class="cardHeader">
+                    ${e.name}
+                </div>
+                <div class="cardBody">
+                    ${e.price}, ${e.category}
+                 </div>
+                </div>
+            `
+        }
+
+        var cards = map(products, toCard);
+
+        // for (var i = 0; i < cards.length; i++) {
+        //     console.log(cards[i]);
+        // }
+
+        forEach(cards, console.log);
+        forEach(cards, alert);
+    </script>
+</body>
+
+</html>

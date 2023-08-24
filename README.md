@@ -138,8 +138,153 @@ var res = x + y;
 
 =================
 
-Resume @11:15
-
 OOP in JS
+
+Object contains state and behaviour
+
+Different ways to create Object in JS.
+1) 
+var obj = new Object();
+obj.x = 10;
+obj.y = 15;
+
+2) Function Constructor
+
+```
+function Product(name, price) {
+    this.name = name; // instance variable ==> state
+    this.price = price; // instance variable ==> state
+}
+
+// adding behaviour / actions / methods
+// instance methods
+Product.prototype.setName = function(name) {
+    this.name = name;
+}
+Product.prototype.getName = function() {
+    return this.name;
+}
+Product.prototype.setPrice = function(p) {
+    this.price = p;
+}
+Product.prototype.getPrice = function() {
+    return this.price;
+}
+var p1 = new Product("iPhone", 89000.00);
+var p2 = new Product("Samsung Flip", 170000.00);
+p1.getPrice();
+p2.setName("Samsung Fold");
+
+// static method --> class method
+Product.equals = function(p1, p2) {
+    return (p1.name === p2.name ) && (p1.price === p2.price)
+}
+
+if(Product.equals(p1,p2)) {
+
+}
+```
+
+Product("Onida", 5113.10); // calling like function ==> window's name and price is set :-(
+
+==========
+
+3) JSON ==> JavaScript Object notation ==> Singleton Object ==> Prefer this as carrier of data [ data object]
+
+var product = {"name": "LG AC", "price": 45000.00};
+
+product.name;
+product.price;
+
+---
+// create product object with state and behaviour
+var product = {
+    "name": "LG AC", 
+    "price": 45000.00,
+    "getName": function () {
+        return this.name
+    },
+    "setName": function(n) {
+        this.name = n;
+    }
+}
+
+console.log(product.name);
+product.setName("LG Inverter AC");
+console.log(product.getName());
+
+var ref = product.getName; //reference to function --> context is not copied to "ref"
+
+as good as:
+```
+var ref = function () {
+        return this.name
+}
+```
+ref(); // invoke the function getName() ==> ??? ==> "name" of window
+
+Solution:
+
+var ref2 = product.getName.bind(product); // function def should have "product" context
+ref2(); // "name" of product
+
+====================
+
+var data = [5,2,1];
+data.push(44); // right way to add
+
+data[3] = 44; // avoid, bad
+
+data[100] = 44; // works, but it creates 96 empty elements in data
+
+------------
+
+* Functional Programming using JS
+
+High Order Functions (HOF): 
+1) function accepting function as argument
+2) function return a function
+
+Treat function as first-class member like primitive/object
+
+HOF: function accepting function as argument.
+Advantage --> OCP --> Open Close Principle --> Closed for change, open for extension
+commonly used HOF:
+1) filter
+2) map
+3) forEach
+4) flatMap
+5) reduce
+
+
+"map" --> transform the data
+Check hof1.html
+
+"forEach" --> iteration
+
+"filter" --> to get subset of elements
+
+function filter(elems, predicateFn) {
+    // code..
+}
+
+
+function isMobile(e) {
+    return e.category === 'mobile'
+}
+
+var data = [4,2,8,10];
+
+function isEven(e) {
+    return e % 2 === 0;
+}
+
+
+
+
+
+
+
+
 
 
