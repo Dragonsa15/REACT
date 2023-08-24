@@ -443,5 +443,25 @@ Non-blocking operations
 
 http://localhost:8080/api/flights
 
+https://fakestoreapi.com/products
 
+7) Async and Await --> ESNext / JS 7
+
+Promise callback-hell
+
+getConnection().then(con => {
+    getProjects(con).then(projects => {
+        getEmployees(projects).then(emps => {
+            getPhone(emps).then(phones => {
+                ... send SMS
+            })
+        })
+    })
+})
+
+"fetch" is a Promise API
+
+fetch("https://fakestoreapi.com/products")
+    .then(response => response.json())
+    .then(products => console.log(products))
 
