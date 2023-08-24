@@ -465,3 +465,44 @@ fetch("https://fakestoreapi.com/products")
     .then(response => response.json())
     .then(products => console.log(products))
 
+
+8) class
+9) ES 6 modules
+
+=====================
+
+DOM --> Document Object model --> Language independent [ Java / JS / VB ]
+XML / HTML in the form of tree of objects --> DOM
+
+Using DOM we can:
+1) create elements
+2) delete elements
+3) access elements
+
+HTML ==> DHTML
+
+Access DOM elements:
+1) getElementById()
+2) getElementsByTagName()
+3) querySelector() --> by id, class , by tag
+4) querySelectorAll()
+
+Get by class name
+document.querySelector(".tmpl-headerNavItem_home")
+document.querySelector(".tmpl-headerNavItem_home").innerHTML
+
+document.querySelector(".tmpl-headerNavItem_home").innerHTML = "Banu"
+
+document.getElementsByTagName("a")
+
+document.getElementById("tmpl-header")
+<header id=​"tmpl-header" class=​"tmpl-header" style=​"visibility:​ visible;​">​</header>​
+document.getElementById("tmpl-header").innerHTML = ""
+
+=====
+
+Create Dynamic elements using DOM
+
+
+
+
