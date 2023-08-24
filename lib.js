@@ -14,3 +14,4 @@ function forEach(elems, action) {
     }
 }
 
+// add HOF filter

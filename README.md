@@ -279,12 +279,44 @@ function isEven(e) {
     return e % 2 === 0;
 }
 
+------------
+
+note: map, filter, forEach --> are built-in and available in "arrays"
 
 
+var data = [4,2,8,10];
+
+var elems = data.filter(function(e) { return e % 2 === 0});
 
 
+2) HOF: function return a function
+
+Closure: a mechanism where the returned inner function can access all the members of outer function.
+
+function adder(base) {
+    return function(no) {
+        return base + no;
+    }
+}
+
+var fiveAdder = adder(5);
+
+fiveAdder(4);
 
 
+var tenAdder = adder(10);
+memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls to pure functions and returning the cached result when the same inputs occur again.
+
+
+// pure Function
+function add(x,y) {
+    return x + y;
+}
+
+// not a pure function --> each time when called gives different result
+function doTask() {
+    return new Date();
+}
 
 
 
