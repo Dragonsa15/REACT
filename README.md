@@ -430,3 +430,18 @@ cpy.price = 100;
 
 console.log(product.price); // 218000.00
 console.log(cpt.price); // 100
+
+var product = { "id": 1, "name": "Sony Bravia", "price": 218000.00, "category": "tv", supplier: {
+    "name" : "ABC",
+    "phone": "3343455"
+} };
+
+========
+
+6) Promise API for side-effects --> async operations
+Non-blocking operations
+
+http://localhost:8080/api/flights
+
+
+
