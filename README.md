@@ -541,15 +541,67 @@ ES 2015 / JS 6 version features
 
 * DOM 
 
-------------------
+-----------------------
 
-Event Capturing and Bubbling
+NodeJS
+* Platform with V8 JavaScript engine and Libuv library [ similar to work done by WebApi ]
+
+libuv is a multi-platform C library that provides support for asynchronous I/O based on event loops.
+
+Why use nodejs?
+* Build APIs [ like RESTful WS done using Spring Boot], GraphQL, ..
+* Build Traditional Web applications [ like Servlet --> SSR / PHP / ASP.NET]
+* Realtime applications [ like ChatBot]
+* Streaming platform [ Netflix]
+* Building client side web applications like [React / Angular / Backbone]
+* Building Native applications [ ReactNative / Ionic / ...]
+
+Why NodeJS for Building client side web applications?
+1) need a platform to transcompile / transpile
+    we might write code in ES2015+ / TypeScript / Dart [used for flutter] / CoffeeScript / LiveScript
+    But JS engine runs on JS 5 version.
+
+    ES2015+ --> babel --> JS5 version
+    TypesCript -> tsc file.ts --> JS5 version [file.js]
+    file.coffee --> csc file.coffee --> file.js
+
+2) Minify and Uglify the code
+    Minify --> remove un-wanted whitespaces in code
+
+    function doTask() {
+            var a = 10;
+            var b = 15;
+    }
+    --
+    function doTask(){var a=10;var b=15;}
+
+ Uglify --> reduce length of variables and functions
+    function getProducts() {
+        let productsJson = ..
+    }
+
+    function _p() { let _o = }
+
+3) Bundling
+    Without bundling
+    index.html
+    <script src="common.js"></script>
+    <script src="productModule.js"></script>
+    <script src="customerModule.js"></script>
+    <script src="orderModule.js"></script>
+    <script src="paymentModule.js"></script>
+
+    6 Network calls [ 1 for index.html and each call to download scripts]
+
+    With bundling
+    index.html
+    <script src="bundle.js"></script>
+
+4) Testing --> Unit Testing and E2E testing
+5) Static code analysis
 
 
-
-
-
-
+$ node --version
 
 
 
