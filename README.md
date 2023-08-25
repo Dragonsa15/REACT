@@ -860,3 +860,15 @@ webpack-dev-server --> Development Server --> simple Http-server to serve resour
 
 In Production we use : Apache, Nginx, Tomcat, jetty, IIS
 
+=========
+
+css-loader and style-loader
+npm i css-loader style-loader -D
+
+* css-loader 
+allows us to import "css" files in "js"
+
+* style-loader will place the loaded css into index.html
+<style>
+
+</style>

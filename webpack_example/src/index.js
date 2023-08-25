@@ -1,6 +1,9 @@
 // const { map, forEach } = require('./lib');
-import map, { forEach, filter } from './lib';
-import Person from './Person';
+import map, { forEach, filter } from './lib'; // babel-loader
+import Person from './Person'; // babel-loader
+
+import './styles.css' // css-loader
+
 
 console.log("Welcome to Webpack!!!");
 
