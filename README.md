@@ -872,3 +872,104 @@ allows us to import "css" files in "js"
 <style>
 
 </style>
+
+```
+
+==========
+
+Rendering: data to presentation
+
+Server Side Rendering [ tightly coupled client-server architecture]
+Client Side Rendering [decouple client-server ; we can have mobile / web /standalone client]
+
+CSR became popular with SPA ==> Single Page Application
+single "index.html" to display different views
+
+1) DOM: APis for create/ access and delete, ...
+2) jQuery: simplfied DOM
+$("<div>") ==> document.createElement("div")
+$("div") ==> document.getElementsByTagName("div")
+
+3) Templates [ static + dynamic content] using interpolation
+ Mustache, HandleBar, UnderScore, jqueryTemplate, Knockout, EJS, JADE, PUG,..
+
+ Mustache example: interpolation {{}}
+ JSON data from Server:
+ ```
+ {
+  "header": "Colors",
+  "items": [
+      {"name": "red", "first": true, "url": "#Red"},
+      {"name": "green", "link": true, "url": "#Green"},
+      {"name": "blue", "link": true, "url": "#Blue"}
+  ],
+  "empty": false
+}
+ ```
+ Templates:
+ ```
+ <h1>{{header}}</h1>
+{{#items}}
+  {{#first}}
+    <li><strong>{{name}}</strong></li>
+  {{/first}}
+  {{#link}}
+    <li><a href="{{url}}">{{name}}</a></li>
+  {{/link}}
+{{/items}}
+
+{{#empty}}
+  <p>The list is empty.</p>
+{{/empty}}
+
+ ```
+
+4) Frameworks and Libraries
+
+MVC Architecture --> 1970's
+Model View Architecture
+
+4.1) Backbone library ==> gave support to Model and controller; for view we need to choose any of above mentioned templates
+
+4.2) AngularJS ==> Google ==> Framework ==> total solution
+    issues: digest and apply
+4.3) Facebook ==> 
+    XHP, Bolt, React
+    OpenSource ==> Khan Academy ==> 
+    Netflix 
+
+    React ==> View Library    
+    Model --> Redux / Mobx / Observable ...
+    https://www.youtube.com/watch?v=8pDqJVdNa44&t=3769s
+
+4.4) Angular Framework
+
+-----
+
+React View Library
+
+```
+resolve: {
+            extensions: [".js", ".jsx"]
+        }
+import filter from './lib';
+look for lib.js; if not found look for lib.jsx
+
+```
+
+React.createElement("h1") wrapper for 
+document.createElement("h1")
+
+React node are not real DOM, but a representation of a potential DOM node.
+
+representation of a potential DOM node can be considered as Virtual DOM
+
+React node can be a ReactElement, ReactFragment, Array of ReactElement, nullm String, boolean
+
+
+Renderers: 
+https://github.com/chentsulin/awesome-react-renderer
+web: react-dom
+Desktop: proton-native
+mobile: react-native
+tv: react-tv

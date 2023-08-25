@@ -27,6 +27,9 @@ module.exports = function () {
                     use:  ["style-loader", "css-loader"]
                 }
             ]
+        },
+        resolve: {
+            extensions: [".js", ".jsx"]
         }
     }
 }

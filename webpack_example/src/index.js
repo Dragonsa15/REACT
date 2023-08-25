@@ -1,12 +1,19 @@
 // const { map, forEach } = require('./lib');
+import React from 'react';
+import ReactDOM  from 'react-dom';
 import map, { forEach, filter } from './lib'; // babel-loader
 import Person from './Person'; // babel-loader
-
 import './styles.css' // css-loader
-
-
 console.log("Welcome to Webpack!!!");
 
+// REACT code
+
+let Welcome = React.createElement("h1", { style: { 'color': 'red' } }, "Welcome to React!!!");
+console.log(Welcome);
+
+ReactDOM.render(Welcome, document.getElementById("root"));
+
+// REACT code END
 let p1 = new Person("Gavin", 42);
 console.log(p1.getName(), p1.getAge());
 
