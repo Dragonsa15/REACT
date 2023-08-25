@@ -802,3 +802,34 @@ webpack_example>  npm i webpack webpack-cli webpack-dev-server html-webpack-plug
 any other script name other than "start" and "test" we should use
 npm run <<scriptname>>
 npm run dev
+or
+npm run prod
+
+
+custom configure webpack
+
+4) Adding babel for transpiler
+
+npm i @babel/core babel-loader @babel/preset-env -D
+
+* babel-loader ==> loads "js" files which are imported into memory
+example:
+import {map} from './lib'
+loaded 'lib.js' is sent to @babel/core --> transpiler to convert to lower version of JS
+
+* @babel/preset-env
+
+@babel/preset-env is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s).
+
+A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively ...
+
+JS engine --> JS 5 engine
+
+I write code in ES2015+
+Promise API is a ES2015+ feature not available in JS 5 engine.
+
+Polyfill will use alternate code which can simulate the Promise behaviour
+https://www.npmjs.com/package/core-js
+
+
+

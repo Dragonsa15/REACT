@@ -1,5 +1,5 @@
 // HOF
-function map(elems, transformFn) {
+export default function map(elems, transformFn) {
     var result = [];
     for (var i = 0; i < elems.length; i++) {
         result.push(transformFn(elems[i]));
@@ -8,12 +8,12 @@ function map(elems, transformFn) {
 }
 
 // HOF
-function forEach(elems, action) {
+export function forEach(elems, action) {
     for (var i = 0; i < elems.length; i++) {
         action(elems[i]);
     }
 }
 
-module.exports = {
-    forEach, map
-}
+// module.exports = {
+//     forEach, map
+// }

@@ -1,5 +1,11 @@
-const { map, forEach } = require('./lib');
+// const { map, forEach } = require('./lib');
+import map, { forEach } from './lib';
+import Person from './Person';
+
 console.log("Welcome to Webpack!!!");
+
+let p1 = new Person("Gavin", 42);
+console.log(p1.getName(), p1.getAge());
 
 var products = [
     { "id": 1, "name": "Sony Bravia", "price": 218000.00, "category": "tv" },
