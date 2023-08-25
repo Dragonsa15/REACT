@@ -603,5 +603,94 @@ Why NodeJS for Building client side web applications?
 
 $ node --version
 
+======================
+https://addyosmani.com/learning-jsdp/
 
+Module system 
+1) IIFE --> Immediate Invoke Function Expression
+
+    var shopModule = (function () {
+        var data = []; // private to shopModule
+        function addToCart(p) {
+            data.push(p);
+        }
+        function computeTotal() {
+
+        }
+        function getCart() {
+
+        }
+        return {
+            addToCart,
+            getCart
+        }
+    })();
+
+shopModule.addToCart(..);
+shopModule.getCart();
+shopModule.data; // error --> private
+shopModule.computeTotal(); // error --> private
+
+var productModule =(function () {
+        var data = []; // private to productModule
+        function getProducts() {}
+        return {
+           getProducts
+        }
+})();
+
+2) CommonJS Module System --> default used by NodeJS
+
+lib.js
+```
+var data = []; // private to lib.js
+function map(elems, transformFn) {
+    var result = [];
+    for (var i = 0; i < elems.length; i++) {
+        result.push(transformFn(elems[i]));
+    }
+    return result;
+}
+
+// HOF
+function forEach(elems, action) {
+    for (var i = 0; i < elems.length; i++) {
+        action(elems[i]);
+    }
+}
+module.exports = {
+    map,
+    forEach
+}
+```
+other.js
+let {map, forEach} = require('./lib');
+
+3) ESM --> ES2015+ module system --> ES6 Module system
+
+```
+lib.js
+export function map(elems, transformFn) {
+    var result = [];
+    for (var i = 0; i < elems.length; i++) {
+        result.push(transformFn(elems[i]));
+    }
+    return result;
+}
+
+// HOF
+export function forEach(elems, action) {
+    for (var i = 0; i < elems.length; i++) {
+        action(elems[i]);
+    }
+}
+```
+other.js
+import {map, forEach} from './lib';
+
+===
+
+4) AMD
+5) System
+6) UMD
 
