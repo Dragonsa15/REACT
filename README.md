@@ -855,3 +855,8 @@ hashing forces the new file to be loaded
 <script src="dist/bundle.js"></script>
 
 ======
+
+webpack-dev-server --> Development Server --> simple Http-server to serve resources
+
+In Production we use : Apache, Nginx, Tomcat, jetty, IIS
+
