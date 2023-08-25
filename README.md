@@ -694,3 +694,75 @@ import {map, forEach} from './lib';
 5) System
 6) UMD
 
+=======
+
+Node Package Managers:
+* manage dependencies [ 3rd party libraries like react/ react-dom]
+* publish library
+* run scripts [ build, test, start]
+
+NPM, YARN, PNPM --> some of the node package managers
+
+npm i yarn -g
+
+cache = "/Users/banuprakash/.npm" 
+
+NPM --> default package manager installed along with NodeJS
+
+
+npm config list -l
+registry = "https://registry.npmjs.org/" 
+
+https://www.npmjs.com/
+
+To install a library/module into the project:
+npm i react
+
+Central repository "https://registry.npmjs.org/" from where node modules are downloaded
+
+to change
+
+npm config set registry="http://proxy.adobe.com"
+
+Executable Node modules can be installed globally
+
+Java --> Maven
+
+NodeJS project
+Step 1) Initialize a Node Project
+nodeexample> npm init --y
+
+creates package.json --> one per node project
+file where scripts are configured, dependencies and development dependencies are configured
+
+Java --> pom.xml
+
+npm i lodash
+
+"node_modules" folder is one per project where dependencies are downloaded and linked to project
+
+package.json
+"dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^18.0.1",
+    "react-dom": "^18.1.0"
+  }
+
+Project --> Git --> code minus "node_modules" 
+
+Team members will download the project and execute:
+nodeexample> npm i
+
+sees package.json and installs dependencies and devDependencies
+
+"lodash": "4.17.21", --> Exact version is require
+"lodash": "~4.17.21", --> Major version has to be "4", minor and patch can be latest
+"lodash": "^4.17.21", --> any latest version from repo, min version "4.17.21"
+
+Development dependecies are onces which are required only development stage and not in production: like transpiler [ tsc/ babel /csc], testing, Static Code analysis
+--> not part of final bundle --> production
+
+ "scripts": {
+    "start": "node ./src/index.js",
+ }
+npm start
