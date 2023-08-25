@@ -976,8 +976,21 @@ tv: react-tv
 
 Functional component or class component to simplify creating react elements:
 
-React.createElement("div", null, 
-[
-    React.createElement("h1", null, "iPhone"),
-    ...
-)
+
+===
+
+Upto React 17:
+import ReactDOM from 'react-dom';
+ReactDOM.render(<Product name="iPhone 14" price="89000.00" />, document.getElementById("root"));
+Sequential Rendering
+
+React 18+:
+import { createRoot } from 'react-dom/client';
+const root = createRoot(document.getElementById('root'));
+root.render(<Product name="iPhone 14" price="89000.00" />);
+Concurrency in rendering
+
+Stack vs Fiber Architecture
+https://claudiopro.github.io/react-fiber-vs-stack-demo/
+
+Warning: Each child in a list should have a unique "key" prop.

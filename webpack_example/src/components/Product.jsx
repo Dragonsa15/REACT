@@ -1,7 +1,7 @@
 import React from "react"
-export default function Product() {
+export default function Product({ product }) {
     return <div>
-        <h2>iPhone 14</h2>
-        <h4>Rs. 98000.00</h4>
+        {product.name}, {product.price}, {product.category}
     </div>
 }
+
