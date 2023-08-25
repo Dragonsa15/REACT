@@ -18,12 +18,20 @@
     <script>
         function task1(evt) {
             console.log('Task 1', evt.target);
+            let evt = new Event("myevent");
+            evt.target.addEventListener("myevent", dummy);
+            document.dispatchEvent(evt);
         }
         function task2() {
             console.log("Task 2")
         }
 
+        function dummy(evt) {
+            // 
+            evt.removeEventListener("myevent");
+        }
         document.getElementById("first").addEventListener("click", task1);
+
         document.getElementById("first").addEventListener("click", task2);
 
         document.getElementById("second").addEventListener("click", task1);

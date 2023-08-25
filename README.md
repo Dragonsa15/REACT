@@ -523,6 +523,28 @@ A boolean value indicating whether the event will trigger listeners outside of a
 
 ```
 
+Day 2
+
+* JavaScript engine
+* Stack, Heap, WebApi [ setTimeout, Promise, eventHandler] provides Threads for execution for async operations, Callback Queue [ place where callback functions are pushed by the WebApi].
+Event Loop is a thread --> if stack is empty, take function from callback queue and push it to stack for execution.
+
+* Global Creation Context, Execution Context, Function Creation Context, execution Context
+
+* HOISTING [ function and Global hoisting]
+
+if "use strict" is used Global hoisting is not done.
+
+OOP, Functional style of Programming [ HOF], Closure
+
+ES 2015 / JS 6 version features
+
+* DOM 
+
+------------------
+
+Event Capturing and Bubbling
+
 
 
 
