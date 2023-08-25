@@ -1,5 +1,5 @@
 // const { map, forEach } = require('./lib');
-import map, { forEach } from './lib';
+import map, { forEach, filter } from './lib';
 import Person from './Person';
 
 console.log("Welcome to Webpack!!!");
@@ -15,6 +15,7 @@ var products = [
     { "id": 5, "name": "Macbook pro", "price": 260000.00, "category": "computer" }
 ]
 
+filter(products, () => { });
 
 function toCard(e) {
     return `

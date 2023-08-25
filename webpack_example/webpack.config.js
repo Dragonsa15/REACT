@@ -4,7 +4,7 @@ module.exports = function () {
         entry: "./src/index.js",
         output: {
             path: path.resolve(__dirname, "dist"),
-            filename: "bundle.js"
+            filename: "bundle.[contenthash:8].js"
         },
         module: {
             rules: [

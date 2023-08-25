@@ -831,5 +831,27 @@ Promise API is a ES2015+ feature not available in JS 5 engine.
 Polyfill will use alternate code which can simulate the Promise behaviour
 https://www.npmjs.com/package/core-js
 
+npm run prod
+npm start
+
+5) html-webpack-plugin and webpack-dev-server
+The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. 
+<script src="dist/bundle.js"></script>
+5.1) This is especially useful for webpack bundles that include a hash in the filename which changes every compilation.
+bundle.a14e1218.js
+bundle.e7f7267d.js
+
+When we are running application in "development mode" if we have a file name which is constant
+"bundle.js" --> cache by browser any changes done . browser won't reflect changes
+
+hashing forces the new file to be loaded
+<script src="dist/bundle.a14e1218.js"></script>
 
 
+5.2) when many bundle files are there
+
+<script src="dist/common.js"></script>
+<script src="dist/vendor.js"></script> <!-- React and Redux library -->
+<script src="dist/bundle.js"></script>
+
+======

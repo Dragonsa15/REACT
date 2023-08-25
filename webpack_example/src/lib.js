@@ -14,6 +14,9 @@ export function forEach(elems, action) {
     }
 }
 
+export function filter(elems, predicate) {
+    //
+}
 // module.exports = {
 //     forEach, map
 // }
