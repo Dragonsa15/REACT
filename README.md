@@ -766,3 +766,39 @@ Development dependecies are onces which are required only development stage and 
     "start": "node ./src/index.js",
  }
 npm start
+
+npm also takes care of transitive dependency
+
+"mylib": "2.4.1"
+ mylib might in turn depend on "a: "1.31.1" --> "b": " 9.4.1" ...
+==================
+
+JS build tools
+1) Grunt
+2) Gulp
+3) Webpack
+
+build tools  are JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting [static code analysis]. 
+
+webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, ..
+
+Webpack --> default bundler which is used by many libraries/ frameworks like "Angular", "React", ...
+
+---------
+
+Using Webpack
+1) intialize node project
+webpack_example> npm init --y
+
+2) download depenencies
+
+webpack_example>  npm i webpack webpack-cli webpack-dev-server html-webpack-plugin -D
+
+3)
+"scripts": {
+   "dev": "webpack --mode development",
+   "prod": "webpack --mode production"
+  }
+any other script name other than "start" and "test" we should use
+npm run <<scriptname>>
+npm run dev
