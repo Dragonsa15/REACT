@@ -14,6 +14,7 @@ module.exports = function () {
             compress: true,
             port: 3000,
         },
+        devtool: "cheap-module-source-map",
         module: {
             rules: [
                 {
