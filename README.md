@@ -973,3 +973,11 @@ web: react-dom
 Desktop: proton-native
 mobile: react-native
 tv: react-tv
+
+Functional component or class component to simplify creating react elements:
+
+React.createElement("div", null, 
+[
+    React.createElement("h1", null, "iPhone"),
+    ...
+)
