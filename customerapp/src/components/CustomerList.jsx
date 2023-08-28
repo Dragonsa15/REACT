@@ -38,12 +38,15 @@ export default class CustomerList extends Component {
         ]
     }
 
+    componentDidMount() {
+        this.state.original = this.state.customers; // copy of customers
+    }
 
     // returns JSX which is converted into react.element; similar to function component
     // returned value
     render() {
         return <div>
-            <Filter />
+            <Filter filterEvent={(txt) => this.filterCustomers(txt)}/>
             {
                 this.state.customers.map(customer => <CustomerRow
                     delEvent={(id) => this.deleteCustomer(id)}
@@ -55,9 +58,17 @@ export default class CustomerList extends Component {
 
     deleteCustomer(id) {
         let custs = this.state.customers.filter(c => c.id !== id);
-        // this.setState({
-        //     customers: custs
-        // })
-        this.state.customers = custs;
+        this.setState({
+            customers: custs
+        })
+        //this.state.customers = custs;
+    }
+
+    filterCustomers(txt) {
+        let custs = this.state.original.filter(c => c.lastName.toUpperCase()
+                                                    .indexOf(txt.toUpperCase()) >= 0);
+        this.setState({
+            customers: custs
+        })
     }
 }
