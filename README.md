@@ -1186,10 +1186,13 @@ findByRole
 findByTestId
 
 
-npm test -- --coverage --watchAll
-
 screen.getByPlaceHolderText("search by name");
 
+npm test -- --coverage --watchAll
+
+=======
+
+App.test.js ==> Integration Testing and not Unit testing
 
 
 
