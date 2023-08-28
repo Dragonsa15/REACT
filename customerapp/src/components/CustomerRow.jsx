@@ -15,3 +15,9 @@ export default class CustomerRow extends Component {
     }
 }
 
+// export default function CustomerRow(props) {
+//     return <div className="row">
+//              {firstName} {lastName} &nbsp;
+//              <button type="button" onClick={() => props.delEvent(id)}>Delete</button>
+//          </div>
+// }

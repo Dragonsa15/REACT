@@ -1216,6 +1216,18 @@ package.json
 $ npm start
 $ npm run e2e
 
+======================
+
+Component Life-cycle method:
+shouldComponentUpdate();
+
+
+
+
+
+
+
+
 
 
 
