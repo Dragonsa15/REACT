@@ -1089,3 +1089,14 @@ const diffs = [
 
 Day 3:
 
+Create React App: Set up a modern web app by running one command.
+npx create-react-app customerapp
+
+https://react.dev/learn/thinking-in-react
+
+Class Component:
+* can have state and behaviour
+* can have life-cycle methods
+
+
+
