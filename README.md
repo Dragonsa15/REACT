@@ -1221,7 +1221,13 @@ $ npm run e2e
 Component Life-cycle method:
 shouldComponentUpdate();
 
+PureComponent contains default method for shouldComponentUpdate()
+export default class NameChild extends PureComponent {
+}
 
+=========
+
+99% will be functional components
 
 
 
