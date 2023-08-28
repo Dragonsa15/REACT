@@ -9,6 +9,4 @@ describe("testing lib", () => {
         expect(result.length).toBe(2);
         expect(predicateCb).toBeCalledTimes(5);
     });
-
-
 });

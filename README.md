@@ -1194,6 +1194,28 @@ npm test -- --coverage --watchAll
 
 App.test.js ==> Integration Testing and not Unit testing
 
+=========================================
+
+E2E Testing  before UAT
+UI --> Backend
+Application should be running
+
+E2E testing libraries:
+cypress  
+nightwatch
+playwright
+protractor
+puppeteer
+webdriverio
+
+npm i cypress -D
+
+package.json
+"e2e": "cypress open"
+
+$ npm start
+$ npm run e2e
+
 
 
 
