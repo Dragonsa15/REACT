@@ -1097,10 +1097,63 @@ https://react.dev/learn/thinking-in-react
 Class Component:
 * can have state and behaviour
 * can have life-cycle methods
+* render() --> compulsory
 
+Component Life Cycle methods:
+1) Mounting Phase: first time when Component is created and rendered / Commit()
 
-Resume @ 12:00
-Tea Break and Task 
+constructor() ==> render() ==> componentDidMount()
+
+componentDidMount() ==> place where API calls are done
+componentDidMount() {
+    fetch("....")
+}
+
+Why not make API calls in constructor()?
+Issue: Until API call is completed, component will not be rendered, leads to FCP core-web-vitals issue
+
+Do the default initialization in constructor, render UI with default values,
+make api call in componentDidMount(), once results are fetched from API call
+re-render.
+
+2. Updating Phase:
+Whenever state  or props change --> component re-renders --> render() --> componentDidUpdate()
+
+In componentDidMount() make API calls, set state, state changes --> render() ->componentDidUpdate()
+
+Scenario 2:
+parent passes new data to child as props, new props render() and make API call based on new props
+
+componentWillUnmount() ==> any changes done in component, before destroying --> flush the state to backed
+
+Display an Modal dialog-box [ Thank you, Do you want to really close?, ..]
+
+In class Component update the state using setState() --> will trigger reconcillation
+```
+// Asynchronous methods to update state and trigger reconcillation
+this.setState({
+            customers: custs
+})
+```
+
+Don't use:
+this.state.customers = custs; // AVOID this
+this.forceUpdate();
+
+```
+export class Sample extends Component {
+    state = {
+        x: 12,
+        y: 44
+    }
+
+    method() {
+        this.setState( {
+            x: 62
+        })
+    }
+}
+```
 
 
 

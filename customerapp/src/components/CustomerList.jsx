@@ -22,8 +22,8 @@ export default class CustomerList extends Component {
             },
             {
                 "id": 4,
-                "firstName": "Rachel",
-                "lastName": "Green",
+                "firstName": "Phoebe",
+                "lastName": "Buffay",
             },
             {
                 "id": 5,
@@ -45,8 +45,19 @@ export default class CustomerList extends Component {
         return <div>
             <Filter />
             {
-                this.state.customers.map(customer => <CustomerRow customer={customer} key={customer.id} />)
+                this.state.customers.map(customer => <CustomerRow
+                    delEvent={(id) => this.deleteCustomer(id)}
+                    customer={customer}
+                    key={customer.id} />)
             }
         </div>
+    }
+
+    deleteCustomer(id) {
+        let custs = this.state.customers.filter(c => c.id !== id);
+        // this.setState({
+        //     customers: custs
+        // })
+        this.state.customers = custs;
     }
 }
