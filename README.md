@@ -1155,6 +1155,42 @@ export class Sample extends Component {
 }
 ```
 
+===============
+
+Testing
+* Unit Testing
+* E2E Testing [ End to End]
+
+Unit Testing
+CustomerCard.jsx < ---- Testing
+Filter.jsx < --- testing
+lib.js <-- Testing
+
+E2E [UI Component --> Services --> Spring Boot --> RestController --> Database -->..]
+
+*Unit Testing Frameworks:
+1) Jasmine [ Angular uses this]
+2) Mocha
+3) JEST [React using create-react-app by default is configured to use Jest]
+
+RTL --> react testing library is built on top of Jest for testing components
+
+npm test
+ "test": "react-scripts test",
+
+ ==========
+findByPlaceholderText
+findByText
+findByAltText
+findByRole
+findByTestId
+
+
+npm test -- --coverage --watchAll
+
+screen.getByPlaceHolderText("search by name");
+
+
 
 
 

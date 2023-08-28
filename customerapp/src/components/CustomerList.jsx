@@ -46,7 +46,7 @@ export default class CustomerList extends Component {
     // returned value
     render() {
         return <div>
-            <Filter filterEvent={(txt) => this.filterCustomers(txt)}/>
+            <Filter filterEvent={(txt) => this.filterCustomers(txt)} />
             {
                 this.state.customers.map(customer => <CustomerRow
                     delEvent={(id) => this.deleteCustomer(id)}
@@ -66,7 +66,7 @@ export default class CustomerList extends Component {
 
     filterCustomers(txt) {
         let custs = this.state.original.filter(c => c.lastName.toUpperCase()
-                                                    .indexOf(txt.toUpperCase()) >= 0);
+            .indexOf(txt.toUpperCase()) >= 0);
         this.setState({
             customers: custs
         })
