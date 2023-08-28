@@ -994,3 +994,98 @@ Stack vs Fiber Architecture
 https://claudiopro.github.io/react-fiber-vs-stack-demo/
 
 Warning: Each child in a list should have a unique "key" prop.
+
+-----
+
+Day 2 Recap:
+
+webpack: build tool
+* css-loader and style-loader 
+we can import css files in js [ css-loader]
+loaded css is placed inside <style></stlye> by style-loader
+
+* babel-loader
+using ESM modules [import and export] of "js"
+babel-core -> transcompiler [ babel.preset-env and babel.preset-react]
+babel.config.json
+* Html-webpack-plugin
+place the bundles in template [ index.html]
+* webpack-dev-server
+
+---
+React is a View library; is component based
+components are created using:
+* React.createElement
+* functional component
+* class component
+
+React.createElement() ===> JS object representation of react.element
+functional component returns JSX; returned JSX is react.element
+
+props:
+* attributes passed to a component
+* children 
+
+Example:
+<h1 color="red" size="12pt">
+    Welcome to React
+</h1>
+
+color, size are props
+"Welcome to React" is props.children
+
+-----
+
+Render
+Convert "js" object returned from createElement(), functional component or class component into Virtual DOM [ DOM without UI]
+In memory:
+<div>
+    Name: iPhone
+    Price: 89000.00
+</div>
+
+commit() converts VDOM into DOM [ Visual UI]
+
+react-dom, react-native, react-tv, proton-native, ....
+
+Upto React 17:
+import ReactDOM from 'react-dom'
+ReactDOM.render();
+
+React 18+:
+
+import {createRoot} from 'react-dom/client'
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<ProductList products={products}/>);
+
+React 18 provides concurrency support.
+
+=================
+
+{} <-- interpolation
+
+====
+
+Reconcillation:
+The reconciliation process makes React work faster. Reconciliation is the process through which React updates the Browser DOM
+
+diffs alogorithm between VDOM and VDOM copy
+
+const diffs = [
+    {
+        newnode: { /* new version of item */},
+        oldnode: { /* original version of item * /},
+        index : /* index of element in parent's list of child nodes */
+    },
+    {
+        newnode: { /* new list item */},
+        index: /* position in parent's list of nodes */
+    }
+]
+
+----
+
+Day 3:
+

@@ -1,0 +1,119 @@
+  state = {
+        "current_question": 0,
+        "questions": [
+            {
+                "category": "Entertainment: Film",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What is the name of James Dean&#039;s character in the 1955 movie &quot;Rebel Without a Cause&quot;?",
+                "correct_answer": "Jim Stark",
+                "incorrect_answers": [
+                    "Ned Stark",
+                    "Jim Kane",
+                    "Frank Stark"
+                ]
+            },
+            {
+                "category": "Geography",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What is the capital of the State of Washington, United States?",
+                "correct_answer": "Olympia",
+                "incorrect_answers": [
+                    "Washington D.C.",
+                    "Seattle",
+                    "Yukon"
+                ]
+            },
+            {
+                "category": "Science: Computers",
+                "type": "multiple",
+                "difficulty": "medium",
+                "question": "What does the acronym CDN stand for in terms of networking?",
+                "correct_answer": "Content Delivery Network",
+                "incorrect_answers": [
+                    "Content Distribution Network",
+                    "Computational Data Network",
+                    "Compressed Data Network"
+                ]
+            },
+            {
+                "category": "History",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "Which modern day country is the region that was known as Phrygia in ancient times?",
+                "correct_answer": "Turkey",
+                "incorrect_answers": [
+                    "Syria",
+                    "Greece",
+                    "Egypt"
+                ]
+            },
+            {
+                "category": "History",
+                "type": "boolean",
+                "difficulty": "medium",
+                "question": "Abraham Lincoln was the first U.S. President to be born outside the borders of the thirteen original states. ",
+                "correct_answer": "True",
+                "incorrect_answers": [
+                    "False"
+                ]
+            },
+            {
+                "category": "Entertainment: Japanese Anime & Manga",
+                "type": "boolean",
+                "difficulty": "hard",
+                "question": "Throughout the entirety of &quot;Dragon Ball Z&quot;, Goku only kills two characters: a miniboss named Yakon and Kid Buu.",
+                "correct_answer": "True",
+                "incorrect_answers": [
+                    "False"
+                ]
+            },
+            {
+                "category": "Politics",
+                "type": "boolean",
+                "difficulty": "medium",
+                "question": "During the 2016 United States presidential election, the State of California possessed the most electoral votes, having 55.",
+                "correct_answer": "True",
+                "incorrect_answers": [
+                    "False"
+                ]
+            },
+            {
+                "category": "Entertainment: Video Games",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "What is the maximum HP in Terraria?",
+                "correct_answer": "500",
+                "incorrect_answers": [
+                    "400",
+                    "1000",
+                    "100"
+                ]
+            },
+            {
+                "category": "Entertainment: Film",
+                "type": "multiple",
+                "difficulty": "easy",
+                "question": "Where does the original Friday The 13th movie take place?",
+                "correct_answer": "Camp Crystal Lake",
+                "incorrect_answers": [
+                    "Packanack",
+                    "Higgins Haven",
+                    "Camp Forest Green"
+                ]
+            },
+            {
+                "category": "Sports",
+                "type": "multiple",
+                "difficulty": "hard",
+                "question": "What team did England beat in the semi-final stage to win in the 1966 World Cup final?",
+                "correct_answer": "Portugal",
+                "incorrect_answers": [
+                    "West Germany",
+                    "Soviet Union",
+                    "Brazil"
+                ]
+            }
+        ]
+    }
