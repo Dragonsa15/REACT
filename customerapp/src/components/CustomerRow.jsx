@@ -2,9 +2,9 @@ import { Component } from "react";
 
 export default class CustomerRow extends Component {
     render() {
-        let customer = this.props.customer;
+        let { id, firstName, lastName } = this.props.customer;
         return <div>
-            {customer.firstName} {customer.lastName} &nbsp;
+            {firstName} {lastName} &nbsp;
             <button type="button">Delete</button>
         </div>
     }
