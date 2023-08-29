@@ -1337,7 +1337,15 @@ export default class StateDemo extends Component {
     }
 }
 ```
+Whenever new props comes to functional component, it re-render.
 
+shouldComponentUpdate() in Class component can be used to avoid re-render
+
+Solution for Functional Component:
+Memoization pattern
+
+React has memo() method built-in for memoization
+2) useReducer
 
 
 
