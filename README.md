@@ -1359,6 +1359,9 @@ dispatch --> to delegate "action" to reducer
 3) useEffect
 is a hook to simulate class component life-cycle methods
 
+=============
+
+2:00 Application using only functional component
 
 
 
