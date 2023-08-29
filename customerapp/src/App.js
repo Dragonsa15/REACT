@@ -1,5 +1,7 @@
 import './App.css';
 import CustomerList from './components/CustomerList';
+import First from './contextexample/First';
+import ProfileContextProvider from './contextexample/ProfileContextProvider';
 import Parent from './examples/Parent';
 
 function App() {
@@ -9,6 +11,10 @@ function App() {
       <CustomerList />
       <hr />
       <Parent />
+
+      <ProfileContextProvider>
+        <First />
+      </ProfileContextProvider>
     </div>
   );
 }

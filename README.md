@@ -1229,6 +1229,46 @@ export default class NameChild extends PureComponent {
 
 99% will be functional components
 
+Task:
+https://react.dev/learn/thinking-in-react 
+
+
+======================
+
+Recap:
+* state and props
+* Whenever state changes components re-renders [Reconcillation]
+* VDOM, VDOM Copy [ changes are done to this], Run Diffs algorithm --> commit() --> Physical DOM, delete VDOM, make VDOM copy as original VDOM
+* class component: state and behaviour, component life cycle methods
+Mounting Phase: constructor() --> render() --> componentDidMount()
+Any API calls should be done in componentDidMount()
+
+Updating Phase: happens when state changes or new props are injected into component
+shouldComponentUpdate() --> true --> render() --> componentDidUpdate()
+Any API calls based on new state or new props do it in --> componentDidUpdate()
+
+Unmounting: when component is destroyed
+* componentWillUnmount()
+write any flushing of state to Backend
+Display any Dialog box on close of component
+
+onChange(), onClick()
+
+-----
+Unit Testing: --> RTL built on top of JEST unit testing framework
+screen, render, fireEvent
+Assertion: expect(this).toBe(that)
+
+E2E Testing: Cypress
+cy --> global object [ visit, get, click(), type(), ...]
+
+=========
+
+Day 4
+
+React Context: Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+
 
 
 
