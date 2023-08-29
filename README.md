@@ -1268,8 +1268,75 @@ Day 4
 
 React Context: Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
+React Hooks:
+Hooks are a new addition in React 16.8. 
+They let you use state and other React features without writing a class.
+Get class component capabilities to functional component.
 
+* class components are heavy because it inherts from Component
+* class components can have state and life-cycle methods
 
+React Hooks helps to have state, behaviour and lifecycle methods in functional component
+Go forward --> 99% will be functional component
+
+React Hooks:
+1) useState
+2) useReducer
+3) useEffect
+4) useContext
+5) useCallback -> won't cover this
+
+Hooks start with "use"
+
+npx create-react-app hooksdemo
+
+* useState is a hook to introduce state variables in React functional component
+
+```
+
+export default function StateDemo() {
+    let [name, setName] = useState("Raj");
+    let [age, setAge] = useState(18);
+
+    return <div>
+        Name: {name} <br />
+        Age : {age} <br />
+        <button type="button" onClick={() => setAge(age + 1)}>Change Age</button>
+        <button type="button" onClick={() => setName(name + "..")}>Change Name</button>
+    </div>
+}
+
+Same as:
+
+export default class StateDemo extends Component {
+    state = {
+        name : "Raj",
+        age : 18
+    }
+
+    setName(arg) {
+        this.setState({
+            name: arg
+        })
+    }
+
+    setAge(arg) {
+        this.setState({
+            age: arg
+        })
+    }
+
+    render() {
+        return <div>
+            Name : { this.state.name} <br />
+            Age : {this.state.age} <br />
+            <button type="button" onClick={() => this.setAge(this.state.age + 1)}>
+                Change Age
+            <button>
+        </div>
+    }
+}
+```
 
 
 
