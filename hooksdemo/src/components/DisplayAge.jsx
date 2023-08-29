@@ -6,5 +6,11 @@ function DisplayAge({ age }) {
         Age in DisplayAge Component: {age}
     </div>
 }
+
+function check(prevProps, currProps) {
+    console.log(prevProps, currProps)
+    return prevProps.age === currProps.age
+}
+
 // check closure.html
-export default React.memo(DisplayAge);
+export default React.memo(DisplayAge, check);

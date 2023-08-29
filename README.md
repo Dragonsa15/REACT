@@ -1345,7 +1345,17 @@ Solution for Functional Component:
 Memoization pattern
 
 React has memo() method built-in for memoization
+
 2) useReducer
+
+useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. Conditionally update the state
+* Action is a object which contains "type" and Optionally "payload"
+* reducer function  (state, action) => newState,
+
+Example: INCREMENT and DECREMENT
+
+dispatch --> to delegate "action" to reducer
+
 
 
 
