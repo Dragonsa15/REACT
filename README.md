@@ -1356,6 +1356,9 @@ Example: INCREMENT and DECREMENT
 
 dispatch --> to delegate "action" to reducer
 
+3) useEffect
+is a hook to simulate class component life-cycle methods
+
 
 
 
